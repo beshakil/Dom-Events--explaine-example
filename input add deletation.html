@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Create Element and Append Chlid </h3>
+
+    <ul id="listContainer">
+        <li id="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li id="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li id="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li id="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li id="items">Lorem ipsum dolor sit amet consectetur, </li>
+    </ul>
+
+    <input id="input-field" type="text">
+    <button id="click-add">Click Me To Add items</button>
+
+
+
+
+    <script>
+
+        document.getElementById('click-add').addEventListener('click', function () {
+
+            const inputText = document.getElementById('input-field');
+
+            const list = document.getElementById('listContainer');
+
+            const createElement = document.createElement('li');
+            createElement.innerText = inputText.value;
+
+            list.appendChild(createElement);
+            inputText.value = '';
+
+        })
+
+        const listContainer = document.getElementById('listContainer').addEventListener('click', function () {
+            const itemsAll = event.target;
+            const parent = event.target.parentNode;
+            parent.removeChild(itemsAll);
+        })
+
+    </script>
+</body>
+
+</html>

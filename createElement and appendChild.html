@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Create Element and Append Chlid </h3>
+
+    <ul id="listContainer">
+        <li class="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li class="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li class="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li class="items">Lorem ipsum dolor sit amet consectetur, </li>
+        <li class="items">Lorem ipsum dolor sit amet consectetur, </li>
+    </ul>
+
+
+
+
+    <script>
+        const list = document.getElementById('listContainer');
+        //console.log(list.childNodes);
+        //console.log(list.parentNode);
+        //console.log(list);
+
+        const createElement = document.createElement('li');
+        const createElementHTML = document.createElement('li');
+        //console.log(createElement);
+
+        createElementHTML.innerHTML = '<h3>This Is a paragraph Create by InnerHTML<h3>';
+
+        createElement.innerText = 'This Is a paragraph Create by InnerText';
+
+        listContainer.appendChild(createElement);
+        listContainer.appendChild(createElementHTML);
+
+        createElement.last
+
+
+    </script>
+</body>
+
+</html>
